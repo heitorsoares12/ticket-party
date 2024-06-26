@@ -1,0 +1,23 @@
+/* Tema Claro */
+:root {
+  --color-primary: #6200EE;
+  --color-primary-contrast: #FFFFFF;
+  --color-text: #000000;
+  --color-surface: #F5F5F5;
+  --color-background: #FFFFFF;
+  --color-destructive: #B00020;
+  --color-success: #018786;
+  --color-alert: #FFC107;
+}
+
+/* Tema Escuro */
+[data-theme='dark'] {
+  --color-primary: #BB86FC;
+  --color-primary-contrast: #121212;
+  --color-text: #E0E0E0;
+  --color-surface: #333333;
+  --color-background: #121212;
+  --color-destructive: #CF6679;
+  --color-success: #03DAC6;
+  --color-alert: #FBC02D;
+}

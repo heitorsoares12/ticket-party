@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+@import 'app/assets/styles/themes.css';
+
+/* Estilos Globais */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.alert {
+  background-color: var(--color-alert);
+}
+
+.success {
+  background-color: var(--color-success);
+}
+
+.destructive {
+  background-color: var(--color-destructive);
+}
