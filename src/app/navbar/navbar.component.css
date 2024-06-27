@@ -1,0 +1,155 @@
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 1rem;
+  flex-grow: 1;
+}
+
+.navbar-item {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.navbar-item a {
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-item a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-item .submenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-item .submenu a:hover {
+  background-color: var(--color-surface);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.theme-toggle button,
+.login-button button {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle button:hover,
+.login-button button:hover {
+  color: var(--color-primary);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  margin: 4px 0;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-toggle:hover .bar {
+  transform: scale(1.1);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navbar-item:hover .submenu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background);
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .mobile-menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mobile-menu-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-surface);
+  }
+  .mobile-menu-item a {
+    color: var(--color-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  .mobile-menu-item a:hover {
+    color: var(--color-primary);
+  }
+}

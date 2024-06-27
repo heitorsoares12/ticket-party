@@ -1,0 +1,50 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="assets/images/logo.png" alt="Ticket Party Logo">
+  </div>
+  <div class="navbar-container">
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="#"><fa-icon [icon]="faHome"></fa-icon> Início</a></li>
+      <li class="navbar-item" (mouseenter)="showEventsMenu = true" (mouseleave)="showEventsMenu = false">
+        <a href="#"><fa-icon [icon]="faCalendarAlt"></fa-icon> Eventos <span class="arrow-down"></span></a>
+        <div class="submenu" *ngIf="showEventsMenu">
+          <a href="#">Próximos Eventos</a>
+          <a href="#">Eventos Passados</a>
+        </div>
+      </li>
+      <li class="navbar-item"><a href="#"><fa-icon [icon]="faInfoCircle"></fa-icon> Sobre</a></li>
+      <li class="navbar-item"><a href="#"><fa-icon [icon]="faEnvelope"></fa-icon> Contato</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <li class="navbar-item theme-toggle">
+        <button (click)="toggleTheme()"><fa-icon [icon]="isDarkTheme ? faMoon : faSun"></fa-icon> Escolher Tema</button>
+      </li>
+      <li class="navbar-item login-button">
+        <button><fa-icon [icon]="faUser"></fa-icon> Login</button>
+      </li>
+    </div>
+    <div class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" *ngIf="showMobileMenu">
+  <ul class="mobile-menu-items">
+    <li class="mobile-menu-item"><a href="#"><fa-icon [icon]="faHome"></fa-icon> Início</a></li>
+    <li class="mobile-menu-item">
+      <a href="#"><fa-icon [icon]="faCalendarAlt"></fa-icon> Eventos <span class="arrow-down"></span></a>
+      <ul class="submenu">
+        <li><a href="#">Próximos Eventos</a></li>
+        <li><a href="#">Eventos Passados</a></li>
+      </ul>
+    </li>
+    <li class="mobile-menu-item"><a href="#"><fa-icon [icon]="faInfoCircle"></fa-icon> Sobre</a></li>
+    <li class="mobile-menu-item"><a href="#"><fa-icon [icon]="faEnvelope"></fa-icon> Contato</a></li>
+    <li class="mobile-menu-item login-button">
+      <button><fa-icon [icon]="faUser"></fa-icon> Login</button>
+    </li>
+  </ul>
+</div>

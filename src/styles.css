@@ -1,8 +1,5 @@
-/* src/styles.css */
+@import 'assets/styles/themes.css';
 
-@import 'app/assets/styles/themes.css';
-
-/* Estilos Globais */
 body {
   background-color: var(--color-background);
   color: var(--color-text);

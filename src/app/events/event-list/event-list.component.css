@@ -1,0 +1,68 @@
+.event-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.1);
+}
+
+.event-details {
+  padding: 15px;
+  color: #fff;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+.event-date, .event-location {
+  margin: 0 0 5px;
+}
+
+.event-button {
+  background: #ff4081;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.event-button:hover {
+  background: #e73370;
+}
