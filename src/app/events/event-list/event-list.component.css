@@ -54,7 +54,7 @@
 }
 
 .event-button {
-  background: #ff4081;
+  background: var(--color-primary);
   border: none;
   padding: 10px 20px;
   color: #fff;
@@ -64,5 +64,5 @@
 }
 
 .event-button:hover {
-  background: #e73370;
+  background: var(--color-primary-hover);
 }

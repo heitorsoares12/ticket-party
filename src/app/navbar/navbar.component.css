@@ -1,9 +1,3 @@
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
 .navbar {
   display: flex;
   align-items: center;
@@ -11,6 +5,9 @@ body {
   padding: 1rem;
   background-color: var(--color-background);
   color: var(--color-text);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
 }
 
 .navbar-container {
@@ -20,7 +17,7 @@ body {
 }
 
 .navbar-logo img {
-  height: 50px;
+  height: 60px;
 }
 
 .navbar-menu {
@@ -41,24 +38,10 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s ease;
 }
 
-.navbar-item a:hover {
-  color: var(--color-primary);
-}
-
-.navbar-item .submenu a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: var(--color-text);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-item .submenu a:hover {
-  background-color: var(--color-surface);
+.navbar-item a fa-icon {
+  margin-right: 0.5rem;
 }
 
 .navbar-actions {
@@ -74,12 +57,6 @@ body {
   color: var(--color-text);
   cursor: pointer;
   margin: 0 1rem;
-  transition: color 0.3s ease;
-}
-
-.theme-toggle button:hover,
-.login-button button:hover {
-  color: var(--color-primary);
 }
 
 .mobile-menu-toggle {
@@ -93,11 +70,6 @@ body {
   height: 3px;
   background-color: var(--color-text);
   margin: 4px 0;
-  transition: transform 0.3s ease;
-}
-
-.mobile-menu-toggle:hover .bar {
-  transform: scale(1.1);
 }
 
 .submenu {
@@ -107,11 +79,32 @@ body {
   left: 0;
   background-color: var(--color-background);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 150px;
 }
 
 .navbar-item:hover .submenu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-item .submenu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item .submenu a:hover {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
 }
 
 @media (max-width: 768px) {
@@ -144,12 +137,5 @@ body {
   .mobile-menu-item a {
     color: var(--color-text);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-  }
-  .mobile-menu-item a:hover {
-    color: var(--color-primary);
   }
 }
